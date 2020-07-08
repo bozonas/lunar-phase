@@ -1,8 +1,22 @@
 .App {
   text-align: center;
+}
+
+html {
   background-color: black;
 }
 
-#moon_image {
+.moon_image_container {
+  position: relative;
+  display: block;
   height: 100vh;
+  z-index: -1;
+}
+
+.moon_image {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 100%;
+  position: absolute;
 }
