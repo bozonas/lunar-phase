@@ -13,6 +13,13 @@ html {
   z-index: -1;
 }
 
+@media (min-width: 1280px) {
+  .moon_image_container_big {
+    width: 100vh;
+  }
+}
+
+
 .moon_image {
   left: 50%;
   top: 50%;

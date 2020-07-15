@@ -9,9 +9,11 @@ export interface MainMoonImageProps {
 const MainMoonImage = (props: MainMoonImageProps) => {
 
   return (
-    <div className='moon_image_container'>
+    <div className='moon_image_container moon_image_container_big'>
       <img className='moon_image' src={`${rootImgPath}moon.${props.imageNo}.jpg`} alt=""></img>
-      <img className='moon_image' src={`https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004768/frames/5760x3240_16x9_30p/labels/label.${props.imageNo}.png`} alt=""></img>
+      <div >
+        <img className='moon_image' src={`https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004768/frames/5760x3240_16x9_30p/labels/label.${props.imageNo}.png`} alt=""></img>
+      </div>
     </div>
   );
 };

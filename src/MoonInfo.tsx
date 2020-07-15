@@ -36,14 +36,9 @@ const MoonInfo = (props: MoonInfoProps) => {
   const [moonInfo, setMoonInfo] = useState<MoonInfo | null>(null);
 
   useEffect(() => {
-    fetch(`mooninfo/mooninfo.${props.imageNo}.json`)
+    fetch(`${process.env.PUBLIC_URL}/mooninfo/mooninfo.${props.imageNo}.json`)
       .then(res => res.json() as Promise<MoonInfo>)
-      .then(res => {
-        console.log(res);
-        console.log(res.time.toString());
-        console.log(new Date(res.time).toLocaleString("lt-LT"));
-        setMoonInfo(res)
-      });
+      .then(res => setMoonInfo(res));
   }, [props.imageNo]);
 
   const getAgeInDays = (age: number | undefined) : string => {

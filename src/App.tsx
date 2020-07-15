@@ -20,13 +20,13 @@ function App() {
       <Grid container
         justify="center"
         spacing={0}>
-        <Grid item lg={3} md={12}>
+        <Grid item lg={3} md={12} xs={12}>
           <LunarDatePicker date={date} onDateChange={handleDateChange} />
         </Grid>
-        <Grid item lg={6} md={12}>
+        <Grid item lg={6} md={12} xs={12}>
           <MainMoonImage imageNo={imgNo} />
         </Grid>
-        <Grid item lg={3} md={12} style={{paddingTop: "20px"}}>
+        <Grid item lg={3} md={12} xs={12} style={{paddingTop: "20px"}}>
           <MoonInfo imageNo={imgNo} />
         </Grid>
       </Grid>
